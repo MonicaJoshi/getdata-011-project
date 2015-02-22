@@ -1,8 +1,14 @@
 library(dplyr)
 
+#  set working directory
+rootdir ="c:/r/" # The directory with R script
+wdir <- paste(rootdir,"UCI HAR Dataset", sep="")
+setwd(wdir)
 
 #merge Data
 prepareData <- function(dataType){
+ 
+  
   #set all files to be used
   if(dataType == "test"){
     subjectfile ="c:/r/UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt" 
